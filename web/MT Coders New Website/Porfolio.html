@@ -1,0 +1,550 @@
+<!doctype html>
+<html>
+<head>
+
+	<link rel="icon" href="assets/tablogo.png" type="image/icon type">
+	
+<link href="css/Main StyleSheet.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="css/jquery-fab-button.css" rel="stylesheet">
+<script src="jQuery/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/wow.min.js"></script>
+
+
+
+
+
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<title></title>
+
+<style>
+  .filterDiv {
+   width: 100% !important;
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: transparent;
+    border-radius: 0px;
+    border-bottom: 2px solid #D66828;
+    color: #D66828 !important;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #D66828;
+    color: white !important;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  transform: scale(.9);
+  width: 100% !important;
+  height: 360px;
+  border-radius: 15px;
+
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+.card:hover {
+  transform: translateY(20px);
+}
+.card:hover:before {
+  opacity: 1;
+}
+.card:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+.card .info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+.card .info h1 {
+  margin: 0px;
+}
+.card .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+.card .info button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.card .info button:hover {
+  background: dodgerblue;
+  color: white;
+}
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+ <!--------------------------------Navbar-------------------------------------->
+   
+
+ <nav class="navbar nav1 navbar-expand-lg  sticky-top">
+  <section class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="assets/logo2.png" width="50px" height="auto" alt="" style="transform: scale(1.4);"></a>
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-three-dots"></i><br>
+      
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Who We Are</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Our Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="web-develop.html"><i class="bi bi-globe"></i> Website Development</a>
+            <a class="dropdown-item" href="app-develop.html"><i class="bi bi-phone-fill"></i> Mobile Applications</a>
+            <a class="dropdown-item" href="Marketing.html"><i class="bi bi-megaphone-fill"></i> Digital Marketing</a>
+            <a class="dropdown-item" href="Graphics.html"><i class="bi bi-palette-fill"></i> Graphic Designing</a>
+            <a class="dropdown-item" href="3dhome.html"><i class="bi bi-badge-3d-fill"></i> 3D Home Designing</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Solution
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="solitions.html">Online Job Posting System</a>
+            <a class="dropdown-item" href="#">Insurance Customer Info System</a>
+            <a class="dropdown-item" href="#">Case Management System</a>
+            <a class="dropdown-item" href="#">Real State Customer System</a>
+            <a class="dropdown-item" href="#">Education Management System</a>
+            <a class="dropdown-item" href="#">Point Of Sale (POS)</a>
+          </div>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="technology.html">Technology</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Porfolio.html">Portfolio</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+
+        <li class="nav-item">
+          
+          <section class="quotebtn " data-toggle="modal" data-target="#exampleModalLong"   ></section>
+        
+       
+        </li>
+
+        
+      </ul>
+    </div>
+  </section>
+  </nav>
+
+
+  <!---------------------------------------------------->
+
+  <section class="quotemobile" data-toggle="modal" data-target="#exampleModalLong"></section>
+    <!--------------------------Banner--------------------------->
+
+
+<section class="about-banner navbar pt-5 pb-5">
+    <section class="m-auto text-center ">
+      <h1 class="headings" style="color: #D66828; font-size: 40px;">Our Portfolio</h1>
+      <section class="container ">
+       
+      <br>
+
+
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('website')"> Websites</button>
+        <button class="btn" onclick="filterSelection('mobile')"> Mobile App</button>
+        <button class="btn" onclick="filterSelection('logo')"> Logo</button>
+        <button class="btn" onclick="filterSelection('3dhome')"> 3D Home Designing</button>
+      </div>
+      <br>
+      
+      <div class="container-fluid">
+
+        <section class="row wrapper">
+
+            <div class="filterDiv col-md-3 website">
+              <div class="card m-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+                <div class="info m-auto">
+                  <h1>Design On Tech</h1>
+              
+                  <a href="#" class=" mtbtn pl-2 pr-2  pt-1 pb-1">More Details</a>
+
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="filterDiv col-md-3 mobile bg-danger">
+              <div class="card m-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+                <div class="info m-auto">
+                  <h1>Design On Tech</h1>
+            
+                  <a href="#" class=" mtbtn pl-2 pr-2  pt-1 pb-1">More Details</a>
+            
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="filterDiv col-md-3 website">
+              <div class="card m-auto ">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+                <div class="info m-auto">
+                  <h1>Design On Tech</h1>
+            
+                  <a href="#" class=" mtbtn pl-2 pr-2  pt-1 pb-1">More Details</a>
+            
+                </div>
+              </div>
+            
+            </div>
+
+
+            <div class="filterDiv col-md-3 website">
+              <div class="card m-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+                <div class="info m-auto">
+                  <h1>Design On Tech</h1>
+            
+                  <a href="#" class=" mtbtn pl-2 pr-2  pt-1 pb-1">More Details</a>
+            
+                </div>
+              </div>
+            
+            </div>
+
+
+            <div class="filterDiv col-md-3 website">
+              <div class="card m-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1477666250292-1419fac4c25c?auto=format&amp;fit=crop&amp;w=667&amp;q=80&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" />
+                <div class="info m-auto">
+                  <h1>Design On Tech</h1>
+            
+                  <a href="#" class=" mtbtn pl-2 pr-2  pt-1 pb-1">More Details</a>
+            
+                </div>
+              </div>
+            
+            </div>
+
+           
+              
+
+        </section>
+      
+         
+        
+        
+      </div>
+
+
+      </section>
+    </section>
+</section>
+
+    <!----------------------------------------------------------->
+
+    <section class="container=fluid p-3" style=" background-color: #00000038;">
+      <section class="container">
+        <center>
+          <img src="assets/logo2.png" width="100px" height="auto" alt="">
+          <p>We make your business bright , as well as we promote your <br> business , also we solve your business .</p>
+
+          <a href="" class="m-1" style="font-size: 30px; color: rgb(0, 102, 255);"><i class="fab fa-facebook"></i></a>   <a href=""  class="m-1" style="font-size: 30px; color: rgb(26, 223, 8);"><i class="fab fa-whatsapp"></i></a>  
+         
+         <br><br>
+          <section class="row">
+
+            <section class="col-md-3 ml-auto text-center">
+              <p style="font-size: 17px;">
+                <i class="fas fa-envelope mr-3" style="color: #D66828;"></i> info@mtcoders.com
+              </p>
+            </section>
+
+            <section class="col-md-3 m-auto text-center">
+              <p  style="font-size: 17px;">
+                <i class="fas fa-mobile mr-3" style="color: #D66828;"></i> + 92 315 295 2995
+              </p>
+            </section>
+
+            <section class="col-md-3 mr-auto text-center">
+              <p  style="font-size: 17px;">
+                <i class="fa fa-phone mr-3" style="color: #D66828;"></i> 021 34372995
+              </p>
+            </section>
+
+            <section class="col-md-12 m-auto text-center">
+              <p style="font-size: 17px;">
+                <i class="fas fa-location-arrow mr-3"  style="color: #D66828;"></i> Suit No. 505 5th Floor Marine Faisal Nursury Shahra-e-Faisal Karachi
+              </p>
+            </section>
+
+          </section>
+         
+
+        </center>
+      </section>
+    </section>
+    <section class="container text-center pt-2">
+      <p class="">© 2020 Copyright:
+		
+        <strong style="color: #D66828;"> mtcoders.com</strong>
+    
+      </p>
+    </section>
+    <a class="quot-logo" style="cursor: pointer;">
+      <img src="assets/quaticon.png" class="corner-logo" width="100px" height="auto" alt="" data-toggle="modal" data-target="#exampleModalLong">
+  </a>
+
+
+    <!-- Floating Social Media bar Starts -->
+<div class="float-sm"  >
+  <div class="fl-fl float-fb">
+    <i class="fab fa-facebook " style="float: left !important;"></i>
+	<a href="https://www.facebook.com/navincc1998"  target="_blank">
+		<section class="Social-btn">Facebook</section>	
+	</a>
+  </div>
+  <div class="fl-fl float-tw">
+	<i class="fab fa-facebook-messenger" style="float: left !important;"></i>
+	<a href="https://www.facebook.com/navincc1998" target="_blank">
+		<section class="Social-btn">Messenger</section>	
+	</a>
+  </div>
+  <div class="fl-fl float-gp">
+	<i class="fab fa-whatsapp" style="float: left !important;"></i>
+	<a href="https://wa.me/923481311304?text=Hi%20I%27m%20interested%20in%20your%20Services" target="_blank">
+		<section class="Social-btn">WhatsApp</section>	</a>
+  </div>
+  <div class="fl-fl float-rs">
+	<i class="fab fas fa-phone" style="float: left !important;"></i>
+	<a href="tel:+92-3481311304" target="_blank">
+		<section class="Social-btn">Call</section>	
+	</a>
+  </div>
+</div>
+
+<div class="fl-fl float-twr">
+	<i class="fab fa-twitter" style="float: left !important;"></i>
+	<a href="https://twitter.com/navin_jsk" target="_blank">
+		<section class="Social-btn">Twitter</section>	
+	</a>
+  </div>
+</div>
+<!-- Floating Social Media bar Ends -->
+
+
+
+<div class="modal fade mainmodal"  id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document"  style=" background-color: white !important;">
+    <div class="modal-content"  style="backdrop-filter:blur(50px) !important; background-color: transparent !important;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"  style="color: #D66828; font-size: 30px;">Quotation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="">
+      
+          <div class="form-group">
+           
+            <input type="text" class="form-control textfield" style="background-color: rgba(197, 197, 197, 0.281) !important;" id="exampleInputPassword1" placeholder="Name">
+  
+          </div>
+  
+
+          <div class="form-group">
+           
+            <input type="text" class="form-control textfield" style="background-color: rgba(197, 197, 197, 0.281) !important;" id="exampleInputPassword1" placeholder="Details">
+  
+          </div>
+  
+
+          <div class="form-group">
+           
+            <input type="text" class="form-control textfield" style="background-color: rgba(197, 197, 197, 0.281) !important;" id="exampleInputPassword1" placeholder="Deadline">
+            
+          </div>
+
+
+          <div class="form-group">
+           
+            <select class="form-control textfield" name="" id="" style="background-color: rgba(197, 197, 197, 0.281) !important;">
+              <selected value="">PHP</selected>
+              <option value="">.NET</option>
+              <option value="">Laravel</option>
+              <option value="">Python</option>
+              <option value="">Wordpress</option>
+              <option value="">Magento</option>
+              <option value="">HTML</option>
+            </select>    
+
+          </div>
+  
+  
+         
+          <center>
+            <a href="" class=" mtbtn pl-2 pr-2  pt-1 pb-1">Submit</a>
+  
+            <br><br>
+            
+          
+          </center>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+
+<script src="js/jquery-fab-button.js"></script>
+

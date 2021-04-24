@@ -1,0 +1,391 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+body{
+    background-color: rgb(247, 247, 247) !important;
+}
+.main-logo{
+    position: absolute !important; 
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.navbar{
+   
+    border-top: 5px solid #D66828;
+    background-color: white !important;
+}
+.nav1{
+    z-index: 2001 !important;
+}
+
+.mainmodal{
+    z-index: 2002 !important;
+}
+.nav-link{
+    color: #D66828 !important;
+    font-family:monospace;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-weight: bold;    
+}
+.dropdown-item{
+    color: #D66828 !important;
+    font-family:monospace;
+}
+
+.dropdown-item:hover{
+    background-color: #D66828 !important;
+    color: white !important;
+    font-family:monospace;
+}
+
+
+
+.nav-item{
+    
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 1s;
+}
+
+.nav-item:hover{
+    background-color: white ;
+    border-radius: 50px;
+    transition: 1s;
+}
+
+.nav-item:hover .nav-link{
+  color: #D66828 !important;
+  transition: 1s;
+}
+.banner{
+    background-image:url("../assets/banner.png") ;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bannerheading{
+    color: #D66828;
+    font-size: 70px;
+    font-family: 'Anonymous Pro', monospace;  
+    line-height: 1;  
+}
+.aboutbanner{
+    border-radius: 5px;
+    background-image:url("../assets/aboutbanner.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+ 
+}
+
+
+
+.mtbtn{
+    border-radius: 0px !important;
+    background-color: transparent !important;
+    box-shadow: transparent !important;
+    color: #D66828 !important;
+    border-bottom: 2px solid #D66828 !important;
+    font-weight: bold;
+    transition: 1s;
+
+}
+.mtbtn:hover{
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: bold;
+    background-color: #D66828 !important;
+    transition: 1s;
+  
+}
+.headings{
+    font-family: 'Anonymous Pro', monospace;  
+}
+
+.servicebanner{
+    background-attachment: fixed;
+    background-image:url("../assets/bannerservice.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.service-card{
+    transform: scale(.9);
+    border-radius: 5px;
+    transition: .5s;
+}
+.service-card:hover{
+    transform: scale(1);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.work-with{
+    transform: scale(.9);
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.work-with:hover{
+    transform: scale(1);
+    transition: .5s;
+}
+.quot-logo{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+.about-banner{
+    background-image:url("../assets/about-banner.jpg") ;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-banner{
+    background-image:url("../assets/contat-banner.jpg") ;
+   
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.textfield{
+    background-color: rgba(255, 255, 255, 0.137) !important;
+    border-radius: 0px !important;
+    border:1px solid transparent !important;
+    color: black !important;
+}
+
+.login-bg{
+    background-image:url("../assets/banner.png") ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.career-banner{
+    background-image:url("../assets/career-banner.jpg") ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.fl-fl {
+    background-color: #3333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 4px;
+    width: 200px;
+    position: fixed;
+    right: -160px;
+    z-index: 10000 !important;
+    font: normal normal 10px Arial;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  
+  .fab {
+    font-size: 26px;
+    color: #D66828;
+    padding: 10px 0;
+    width: 40px;
+    margin-left: 3px;
+  }
+  
+  .fl-fl:hover {
+    right: 0;
+    background-color:#D66828; 
+    filter:drop-shadow(0 0 10px rgb(247, 128, 18));
+    color: white !important;
+  }
+
+  .fl-fl:hover .fab{
+      color: white !important;
+  }
+  
+  .fl-fl a {
+    color: #fff !important;
+    text-decoration: none;
+    text-align: center;
+    line-height: 43px!important;
+    vertical-align: top!important;
+  }
+  
+  .float-fb {
+    top: 160px;
+  }
+  
+  .float-tw {
+    top: 215px;
+  }
+  
+  .float-gp {
+    top: 270px;
+  }
+  
+  .float-rs {
+    top: 325px;
+  }
+  
+  .float-ig {
+    top: 380px;
+  }
+  
+  .float-pn {
+    top: 435px;
+  }
+  .float-twr {
+    top: 380px;
+  }
+  
+  .Social-btn{
+    width: 145px !important;
+    float: left !important;
+    font-family: arial;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  .service-icon{
+      font-size: 70px !important;
+      color: #D66828;
+  }
+  /* Floating Social Media Bar Style Ends Here */
+.bi-three-dots{
+    color: #D66828 !important;
+}
+
+
+  .quotebtn{ 
+      background-image: url(../assets/quote1.png);
+      background-position: center;
+      background-size: contain;
+      position: relative;
+      width: 50px;
+      height: 35px;
+      transform: scale(2) !important;
+      top: 0px;
+      left: 15px;
+      background-repeat: no-repeat;
+      transition: .5s;
+      cursor: pointer;
+  }
+  .quotebtn:hover{ 
+    background-image: url(../assets/quote2.png);
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    width: 50px;
+    height: 35px;
+    transform: scale(2) !important;
+    top: 0px;
+    left: 15px;
+    background-repeat: no-repeat;
+    transition: .5s;
+    
+}
+
+.quotemobile{ 
+    display: none;
+    background-image: url(../assets/quote1.png);
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    transform: scale(1.5) !important;
+    top: 90px;
+    right: 20px;
+    background-repeat: no-repeat;
+    transition: .5s;
+    cursor: pointer;
+    z-index: 2000 !important;
+}
+
+.quotemobile:hover{ 
+    background-image: url(../assets/quote2.png);
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    transform: scale(1.5) !important;
+    top: 90px;
+    right: 20px;
+    background-repeat: no-repeat;
+    transition: .5s;
+    cursor: pointer;
+    z-index: 2000 !important;
+}
+
+
+
+@media (min-width:1px) and (max-width: 700px){
+    
+        .corner-logo{
+            width: 130px !important;
+            height: auto !important;
+        }
+
+        .bannerheading{
+            font-size: 30px !important;
+        }
+    .corner-logo{
+        width: 80px !important;
+        height: auto !important;
+    }
+}
+
+@media (min-width:1px) and (max-width: 1112px){
+    .quotebtn{ 
+        background-image: url(../assets/quote1.png);
+        background-position: center;
+        background-size: contain;
+        position: relative;
+        width: 50px;
+        height: 35px;
+        transform: scale(2) !important;
+        top: 0px;
+        left: 15px;
+        background-repeat: no-repeat;
+        transition: .5s;
+        cursor: pointer;
+        display: none;
+    }
+    .quotemobile{ 
+        display: block;
+        background-image: url(../assets/quote1.png);
+        background-position: center;
+        background-size: contain;
+        position: fixed;
+        width: 50px;
+        height: 35px;
+        transform: scale(1.5) !important;
+        top: 90px;
+        right: 20px;
+        background-repeat: no-repeat;
+        transition: .5s;
+        cursor: pointer;
+        z-index: 2000 !important;
+    }
+}
