@@ -17,10 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home','Web\WebController@homepage');
+Route::get('/webhome','Web\WebController@homepage');
 Route::get('/who-we-are','Web\WebController@who_we_are');
 Route::get('/technology','Web\WebController@technology');
 Route::get('/single-service','Web\WebController@view_service');
+Route::get('/solution','Web\WebController@solution');
+Route::get('/portfolio','Web\WebController@portfolio');
+Route::get('/portfolio_category','Web\WebController@portfolio_category');
+Route::get('/contact','Web\WebController@contact');
+Route::post('/contact/submit','Web\WebController@contact_submit');
 
 Route::get('/admin', function(){
 	return view('layouts.masterdashboard');
@@ -87,7 +92,26 @@ Route::prefix('admin')->group(function () {
 	Route::post('/sub_service/submit','Admin\SubServiceController@submit');
 	Route::get('/sub_service/edit','Admin\SubServiceController@edit');
 	Route::post('/sub_service/update','Admin\SubServiceController@update');
-
+	
 });
 
 // ========================END========================
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

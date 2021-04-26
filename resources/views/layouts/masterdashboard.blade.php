@@ -217,10 +217,10 @@
                             <a href="{{action('Admin\ServiceController@index')}}">
                                 <i class="fas fa-address-card"></i>Service</a>
                         </li>
-                         <li>
+                         <!-- <li>
                             <a href="{{action('Admin\SolutionController@index')}}">
                                 <i class="fas fa-address-card"></i>Solution</a>
-                        </li>
+                        </li> -->
                          <li>
                             <a href="{{action('Admin\SubServiceController@index')}}">
                                 <i class="fas fa-address-card"></i>Sub Service</a>

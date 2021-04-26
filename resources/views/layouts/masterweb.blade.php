@@ -1,5 +1,6 @@
 <?php 
 $service = DB::table('services')->get();
+$solution = DB::table('solutions')->get();
 
 ?>
 
@@ -76,12 +77,15 @@ $service = DB::table('services')->get();
                 Solution
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{asset('WebsiteAssets')}}/solitions.html">Online Job Posting System</a>
+                @foreach($solution as $s)
+                <a class="dropdown-item" href="{{action('Web\WebController@solution')}}?solution_id={{$s->solution_id}}">{{$s->name}}</a>
+                @endforeach
+                <!-- <a class="dropdown-item" href="{{asset('WebsiteAssets')}}/solitions.html">Online Job Posting System</a>
                 <a class="dropdown-item" href="{{asset('WebsiteAssets')}}/#">Insurance Customer Info System</a>
                 <a class="dropdown-item" href="{{asset('WebsiteAssets')}}/#">Case Management System</a>
                 <a class="dropdown-item" href="{{asset('WebsiteAssets')}}/#">Real State Customer System</a>
                 <a class="dropdown-item" href="{{asset('WebsiteAssets')}}/#">Education Management System</a>
-                <a class="dropdown-item" href="{{asset('WebsiteAssets')}}/#">Point Of Sale (POS)</a>
+                <a class="dropdown-item" href="{{asset('WebsiteAssets')}}/#">Point Of Sale (POS)</a> -->
               </div>
             </li>
             
@@ -90,16 +94,16 @@ $service = DB::table('services')->get();
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('WebsiteAssets')}}/Porfolio.html">Portfolio</a>
+              <a class="nav-link" href="{{action('Web\WebController@portfolio_category')}}">Portfolio</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{asset('WebsiteAssets')}}/Contact.html">Contact</a>
+                <a class="nav-link" href="{{action('Web\WebController@contact')}}">Contact</a>
             </li>
 
-            <li class="nav-item">
+           <!--  <li class="nav-item">
               <a class="nav-link" href="{{asset('WebsiteAssets')}}/login.html">Login</a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
               

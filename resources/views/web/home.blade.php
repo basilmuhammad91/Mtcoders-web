@@ -49,7 +49,7 @@
           <section class="col-md-4 p-4  border  service-card">
             <i class="{{$s->icon_class}}"  style="font-size: 40px;"></i>
             <h4 class="text-light">{{$s->service_name}}</h4>
-            <a href="{{asset('WebsiteAssets')}}/web-develop.html" class=" mtbtn pl-2 pr-2  pt-1 pb-1">More Details</a>
+            <a href="{{action('Web\WebController@view_service')}}?service_id={{$s->service_id}}" class=" mtbtn pl-2 pr-2  pt-1 pb-1">More Details</a>
           </section>
           @endforeach
 
