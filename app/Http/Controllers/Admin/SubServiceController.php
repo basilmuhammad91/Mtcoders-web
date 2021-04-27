@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\SubService;
 use Illuminate\Http\Request;
+use App\Models\Service;
 
 class SubServiceController extends Controller
 {
@@ -28,7 +29,10 @@ class SubServiceController extends Controller
      */
     public function create()
     {
-        //
+        $service = Service::get();
+        return view('dashboard.sub-service.create')
+        ->with('service', $service)
+        ;
     }
 
     /**
@@ -37,9 +41,22 @@ class SubServiceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function submit(Request $req)
     {
-        //
+        $sub = new SubService();
+        $sub->service_id = $req->service_id;
+        $sub->name = $req->name;
+        $sub->icon_class = $req->icon_class;
+
+        if($sub->save())
+        {
+            return redirect()->action('Admin\SubServiceController@index');
+        }
+        else
+        {
+            return redirect()->back();
+        }
+
     }
 
     /**
@@ -59,9 +76,14 @@ class SubServiceController extends Controller
      * @param  \App\Models\SubService  $subService
      * @return \Illuminate\Http\Response
      */
-    public function edit(SubService $subService)
+    public function edit(Request $req)
     {
-        //
+        $service = Service::get();
+        $sub = SubService::where(["sub_service_id"=>$req->edit_id])->first();
+        return view('dashboard.sub-service.edit')
+        ->with('service', $service)
+        ->with('sub', $sub)
+        ;
     }
 
     /**
@@ -71,9 +93,22 @@ class SubServiceController extends Controller
      * @param  \App\Models\SubService  $subService
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SubService $subService)
+    public function update(Request $req)
     {
-        //
+        $sub = SubService::where(["sub_service_id"=>$req->sub_service_id])->update([
+            "service_id" => $req->service_id,
+            "name" => $req->name,
+            "icon_class" => $req->icon_class
+        ]);
+
+        if($sub)
+        {
+            return redirect()->action('Admin\SubServiceController@index');
+        }
+        else
+        {
+            return redirect()->back();
+        }
     }
 
     /**
@@ -82,8 +117,16 @@ class SubServiceController extends Controller
      * @param  \App\Models\SubService  $subService
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SubService $subService)
+    public function delete(Request $req)
     {
-        //
+        $sub = SubService::where(["sub_service_id"=>$req->delete_id])->delete();
+         if($sub)
+        {
+            return redirect()->action('Admin\SubServiceController@index');
+        }
+        else
+        {
+            return redirect()->back();
+        }
     }
 }

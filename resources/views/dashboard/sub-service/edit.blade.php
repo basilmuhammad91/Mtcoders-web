@@ -6,23 +6,29 @@
 	<div class="col-md-12">
 		<div class="card">
 	        <div class="card-header">
-	            <strong>Add Homepage Details</strong> 
+	            <strong>Edit Sub Service Details</strong> 
 	        </div>
-			<form action="{{action('Admin\HomepageController@update')}}" method="post" class="">
+			<form action="{{action('Admin\SubServiceController@update')}}" method="post" class="">
 				@csrf
 	        <div class="card-body card-block">
 	                <div class="form-group">
-	                    <label class="form-control-label">Banner Heading</label>
-	                    <input type="hidden" name="homepage_id" value="{{$homepage->homepage_id}}">
-	                    <input type="text" value="{{$homepage->banner_heading}}" id="banner_heading" name="banner_heading" placeholder="Enter Banner Heading.." class="form-control">
+	                    <label class="form-control-label">Select Main Service</label>
+	                    <input type="" name="sub_service_id" value="{{$sub->sub_service_id}}">
+	                    <select name="service_id" class="form-control">
+	                    	@foreach($service as $s)
+	                    		<option value="{{$s->service_id}}">{{$s->service_name}}</option>
+	                    	@endforeach
+	                    	
+	                    </select>
+	                </div>
+	                
+	                <div class="form-group">
+	                    <label class="form-control-label">Sub Service Name</label>
+	                    <input type="text" id="banner_text" name="name" value="{{$sub->name}}" placeholder="Enter Sub Service.." class="form-control">
 	                </div>
 	                <div class="form-group">
-	                    <label class="form-control-label">Banner Tagline</label>
-	                    <input type="text" value="{{$homepage->banner_tagline}}" id="banner_tagline" name="banner_tagline" placeholder="Enter Banner Tagline.." class="form-control">
-	                </div>
-	                <div class="form-group">
-	                    <label class="form-control-label">Banner Text</label>
-	                    <input type="text" value="{{$homepage->banner_text}}" id="banner_text" name="banner_text" placeholder="Enter Text.." class="form-control">
+	                    <label class="form-control-label">Icon Class</label>
+	                    <input type="text" id="banner_tagline" name="icon_class" value="{{$sub->icon_class}}" placeholder="Enter Icon Class.." class="form-control">
 	                </div>
 	        </div>
 	        <div class="card-footer">

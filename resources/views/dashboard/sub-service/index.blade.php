@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div class="col-md-2 offset-10">
-	<a href="{{action('Admin\HomepageController@create')}}" class="btn btn-primary btn-sm"><i class="fa fa-dot-circle-o"></i> Add Details</a>
+	<a href="{{action('Admin\SubServiceController@create')}}" class="btn btn-primary btn-sm"><i class="fa fa-dot-circle-o"></i> Add Details</a>
         
 	</div>
 </div>
@@ -18,6 +18,7 @@
                         <th>Main Service</th>
                         <th>Name</th>
                         <th>Icon Class</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,9 +26,13 @@
                     @foreach($sub as $sub)
                         <tr>
                             <td>{{$count}}</td>
-                        <td>{{$sub->service->service_name}}</td>
-                        <td>{{$sub->name}}</td>
-                        <td>{{$sub->icon_class}}</td>
+                            <td>{{$sub->service->service_name}}</td>
+                            <td>{{$sub->name}}</td>
+                            <td>{{$sub->icon_class}}</td>
+                            <td>
+                                <a href="{{action('Admin\SubServiceController@edit')}}?edit_id={{$sub->sub_service_id}}" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="{{action('Admin\SubServiceController@delete')}}?delete_id={{$sub->sub_service_id}}" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
                         </tr>
                         <?php $count++; ?>
                     @endforeach

@@ -92,6 +92,7 @@ Route::prefix('admin')->group(function () {
 	Route::post('/sub_service/submit','Admin\SubServiceController@submit');
 	Route::get('/sub_service/edit','Admin\SubServiceController@edit');
 	Route::post('/sub_service/update','Admin\SubServiceController@update');
+	Route::get('/sub_service/delete','Admin\SubServiceController@delete');
 	
 });
 
